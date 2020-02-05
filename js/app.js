@@ -47,11 +47,38 @@ function render() {
     squares[index].textContent = mark;
   });
 
+  function computerTurn() {
+      var strategies = [];
+      if (option('random')) strategies.push(strategyRandom);
+      for (var i=0; i<strategies.length; i++) {
+        var turn = strategies[i]();
+        if (!turn) continue;
+        val(turn[0], turn[1], computer);
+        break;
+      }
+    }
+
+
+    function strategyRandom() {
+
+      var blanks = [];
+      for (var x=0; x<3; x++) {
+        for (var y=0; y<3; y++) {
+          if (val(x,y)=='') blanks.push([x,y]);
+        }
+      }
+
+      if (blanks.length>0) {
+        var r = Math.floor((Math.random()*blanks.length));
+        return blanks[r];
+      }
+      else return false;
+    }
+
+
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
 }
-
-
 
 function takeTurn(e) {
   if (!win) {
@@ -70,7 +97,6 @@ function takeTurn(e) {
     }
   }
 }
-
 
 
 function getWinner() {

@@ -18,8 +18,8 @@ h2 {
   font-size: 36px;
   font-weight: lighter;
   margin: 2%;
+  color: green;
 }
-
 
 
 .container {
@@ -58,7 +58,7 @@ h2 {
 
 
 .square:hover {
-  background-color: lightgray;
+  background-color: black;
   cursor: pointer;
 }
 
@@ -66,8 +66,8 @@ h2 {
 
 #reset-button {
   background-color: white;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid green;
+  color: green;
   font-size: 21px;
   line-height: 55px;
   margin: 1%;
@@ -78,7 +78,7 @@ h2 {
 
 
 #reset-button:hover {
-  background-color: black;
+  background-color: green;
   color: white;
   cursor: pointer;
 }
