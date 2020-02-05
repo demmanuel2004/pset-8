@@ -1,7 +1,5 @@
 ///////////////////// CONSTANTS /////////////////////////////////////
 
-
-
 const winningConditions = [
   [0, 1, 2],
   [3, 4, 5],
@@ -13,8 +11,6 @@ const winningConditions = [
   [2, 4, 6]
 ];
 
-
-
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 
 let board;
@@ -23,26 +19,17 @@ let win;
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 
-
-
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
 
-
-
 ///////////////////// EVENT LISTENERS ///////////////////////////////
-
-
 
 window.onload = init;
 
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
 
-
-
 ///////////////////// FUNCTIONS /////////////////////////////////////
-
 
 
 function init() {
@@ -54,15 +41,11 @@ function init() {
   render();
 }
 
-
-
 function render() {
 
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
   });
-
-
 
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
