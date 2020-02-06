@@ -19,6 +19,7 @@ let win;
 let x_count = 0
 let o_count = 0
 let whose_turn = 0
+
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 
 const squares = Array.from(document.querySelectorAll("#board div"));
@@ -31,7 +32,9 @@ window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
 document.getElementById("change").onclick = switch_turn;
+
 ///////////////////// FUNCTIONS /////////////////////////////////////
+
 function init() {
   board = ["", "", "", "", "", "", "", "", ""];
   if (whose_turn == 0) {
