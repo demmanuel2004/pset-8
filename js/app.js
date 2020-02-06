@@ -30,7 +30,7 @@ window.onload = init;
 
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-document.getElementById("switch").onclick = switch_turn;
+document.getElementById("change").onclick = switch_turn;
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
   board = ["", "", "", "", "", "", "", "", ""];
