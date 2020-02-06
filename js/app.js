@@ -18,7 +18,7 @@ let turn;
 let win;
 let x_count = 0
 let o_count = 0
-
+let whose_turn = 0
 
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 
@@ -31,7 +31,7 @@ window.onload = init;
 
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-
+document.getElementById("change").onclick = switch_turn;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 
@@ -47,7 +47,14 @@ function init() {
 
   render();
 }
-
+function change_turn() {
+  if (whose_turn == 0) {
+    whose_turn = 1
+  }
+  else if (whose_turn == 1) {
+    whose_turn = 0
+  }
+}
 function render() {
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
