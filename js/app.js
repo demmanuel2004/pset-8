@@ -31,7 +31,7 @@ window.onload = init;
 
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-document.getElementById("change").onclick = switch_turn;
+document.getElementById("change").onclick = whose_turn;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 
