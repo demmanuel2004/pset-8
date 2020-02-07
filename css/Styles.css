@@ -4,7 +4,6 @@ body {
 }
 
 
-
 h1 {
   margin: 0 auto;
   font-family: "Major Mono Display", monospace;
@@ -96,7 +95,22 @@ h2 {
   cursor: pointer;
 }
 
+#change {
+  background-color: white;
+  border: 1px solid blue;
+  color: green;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 1%;
+  text-align: auto;
+  width: 200px;
+}
 
+#change:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
 
 #reset-button {
   background-color: white;
@@ -108,8 +122,6 @@ h2 {
   text-align: center;
   width: 456px;
 }
-
-
 
 #reset-button:hover {
   background-color: green;

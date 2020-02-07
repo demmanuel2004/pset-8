@@ -31,12 +31,13 @@ window.onload = init;
 
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-document.getElementById("change").onclick = whose_turn;
+document.getElementById("change").onclick = change_turn;
 
 ///////////////////// FUNCTIONS /////////////////////////////////////
 
 function init() {
   board = ["", "", "", "", "", "", "", "", ""];
+
   if (whose_turn == 0) {
     turn = "X";
   }
@@ -48,14 +49,19 @@ function init() {
   render();
 }
 function change_turn() {
+
   if (whose_turn == 0) {
-    whose_turn = 1
+    message.textContent = "Turn: O";
+    whose_turn = 1;
   }
   else if (whose_turn == 1) {
-    whose_turn = 0
+    message.textContent = "Turn: X";
+    whose_turn = 0;
   }
+  
 }
 function render() {
+
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
   });
