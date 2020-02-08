@@ -58,7 +58,7 @@ function change_turn() {
     message.textContent = "Turn: X";
     whose_turn = 0;
   }
-  
+
 }
 function render() {
 
