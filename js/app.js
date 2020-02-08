@@ -53,10 +53,12 @@ function change_turn() {
   if (whose_turn == 0) {
     message.textContent = "Turn: O";
     whose_turn = 1;
+    turn = turn === "X" ? "O" : "X"
   }
   else if (whose_turn == 1) {
     message.textContent = "Turn: X";
     whose_turn = 0;
+    turn = turn === "O" ? "X" : "O"
   }
 
 }
